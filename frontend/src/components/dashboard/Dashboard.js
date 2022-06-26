@@ -14,8 +14,22 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Link from "@mui/material/Link";
+import {FormControl, InputLabel, OutlinedInput, InputAdornment} from '@mui/material'
+import ButtonBase from '@mui/material/ButtonBase';
 import WalletConnect from "../WalletConnect";
 import UnlockButton from "../UnlockButton";
+// import polygonEco from '../../../public/images/polygonEco.jpg'
+import Rating from '@mui/material/Rating';
+import Stack from '@mui/material/Stack';
+
+
+const Item = styled(Paper)(({ theme }) => ({
+    backgroundColor: theme.palette.mode === 'white' ? '#fff' : '#fff',
+    ...theme.typography.body2,
+    padding: theme.spacing(1),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+  }));
 
 function Copyright(props) {
   return (
@@ -25,17 +39,15 @@ function Copyright(props) {
       align="center"
       {...props}
     >
-      {"Copyright © "}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
+      {/* {"Copyright © "} */}
+      <Link color="inherit" href="https://twitter.com/Web3Granted">
+        Twitter
       </Link>{" "}
-      {new Date().getFullYear()}
-      {"."}
     </Typography>
   );
 }
 
-const drawerWidth = 300;
+const drawerWidth = 400;
 
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== "open",
@@ -83,6 +95,13 @@ const Drawer = styled(MuiDrawer, {
 
 const mdTheme = createTheme();
 
+const Img = styled('img')({
+    margin: 'auto',
+    display: 'block',
+    maxWidth: '100%',
+    maxHeight: '100%',
+  });
+
 function DashboardContent() {
   const [open, setOpen] = React.useState(true);
   const toggleDrawer = () => {
@@ -90,48 +109,10 @@ function DashboardContent() {
   };
 
   return (
-    <ThemeProvider theme={mdTheme}>
+    <ThemeProvider theme={mdTheme} >
       <Box sx={{ display: "flex" }}>
         <CssBaseline />
-        <AppBar position="absolute" open={open}>
-          <Toolbar
-            sx={{
-              pr: "24px", // keep right padding when drawer closed
-            }}
-          >
-            <IconButton
-              edge="start"
-              color="inherit"
-              aria-label="open drawer"
-              onClick={toggleDrawer}
-              sx={{
-                marginRight: "36px",
-                ...(open && { display: "none" }),
-              }}
-            >
-              {/* <MenuIcon /> */}
-            </IconButton>
-            <Typography
-              component="h1"
-              variant="h6"
-              color="inherit"
-              noWrap
-              sx={{ flexGrow: 1 }}
-            >
-              Granted
-            </Typography>
-            <IconButton color="inherit">
-              <Badge badgeContent={4} color="secondary">
-                <WalletConnect />
-
-                {/* <NotificationsIcon /> */}
-              </Badge>
-            </IconButton>
-            <IconButton>
-              <UnlockButton />
-            </IconButton>
-          </Toolbar>
-        </AppBar>
+        
         <Drawer variant="permanent" open={open}>
           <Toolbar
             sx={{
@@ -144,6 +125,7 @@ function DashboardContent() {
             <IconButton onClick={toggleDrawer}>
               {/* <ChevronLeftIcon /> */}
             </IconButton>
+            
           </Toolbar>
           <Divider />
           <List component="nav">
@@ -151,6 +133,95 @@ function DashboardContent() {
             <Divider sx={{ my: 1 }} />
             {/* {secondaryListItems} */}
           </List>
+
+          <div style={{marginLeft: '2rem', marginTop: '3rem'}}>
+                <div>
+                     Search Description
+                    <br></br>
+                    <FormControl fullWidth sx={{ m: 1 }} style={{marginTop: '1rem',}}>
+                    {/* <InputLabel htmlFor="outlined-adornment-amount">Required</InputLabel> */}
+                    <OutlinedInput
+                        style={{ paddingTop: '0.5rem', width: '20rem'}}
+                        id="outlined-adornment-amount"
+                        startAdornment={<InputAdornment position="start"></InputAdornment>}
+                        // label="Required"
+                    />
+                    </FormControl>
+                    </div>
+
+                    <div style={{paddingTop: '2rem'}}>
+                    Grant Range
+                    <br></br>
+                    <div>
+                        <FormControl fullWidth sx={{ m: 1 }} style={{marginTop: '1rem',}}>
+                        <InputLabel htmlFor="outlined-adornment-amount">Maximum</InputLabel>
+                        <OutlinedInput
+                            style={{ paddingTop: '0.5rem', width: '20rem'}}
+                            id="outlined-adornment-amount"
+                            startAdornment={<InputAdornment position="start">$</InputAdornment>}
+                            label="Required"
+                        />
+                        </FormControl>
+
+                        <br></br>
+
+                        <FormControl fullWidth sx={{ m: 1 }} style={{marginTop: '1rem',}}>
+                        <InputLabel htmlFor="outlined-adornment-amount">Minimum</InputLabel>
+                        <OutlinedInput
+                            style={{ paddingTop: '0.5rem', width: '20rem'}}
+                            id="outlined-adornment-amount"
+                            startAdornment={<InputAdornment position="start">$</InputAdornment>}
+                            label="Minimum"
+                        />
+                        </FormControl>
+                        
+                        
+                    </div>
+                    </div>
+                    <div style={{paddingTop: '2rem'}}>
+                     Tag
+                    <br></br>
+                    <FormControl fullWidth sx={{ m: 1 }} style={{marginTop: '1rem',}}>
+                    <OutlinedInput
+                        style={{ paddingTop: '0.5rem', width: '20rem'}}
+                        id="outlined-adornment-amount"
+                        startAdornment={<InputAdornment position="start"></InputAdornment>}
+                        // label="Required"
+                    />
+                    </FormControl>
+                    </div>
+
+                    <div style={{paddingTop: '2rem'}}>
+                    Community Size
+                    <br></br>
+                    <FormControl fullWidth sx={{ m: 1 }} style={{marginTop: '1rem',}}>
+                    <OutlinedInput
+                        style={{ paddingTop: '0.5rem', width: '20rem'}}
+                        id="outlined-adornment-amount"
+                        startAdornment={<InputAdornment position="start"></InputAdornment>}
+                        // label="Required"
+                    />
+                    </FormControl>
+                    </div>
+                    
+                    <div style={{paddingTop: '2rem'}}>
+                     Rating
+                    <br></br>
+                    <FormControl fullWidth sx={{ m: 1 }} style={{marginTop: '1rem',}}>
+                    
+                    <Stack spacing={1}>
+                        <Rating name="half-rating" defaultValue={5} precision={0.5} />
+                        <Rating name="half-rating-read" defaultValue={4} precision={0.5} readOnly />
+                        <Rating name="half-rating" defaultValue={3} precision={0.5} />
+                        <Rating name="half-rating-read" defaultValue={2} precision={0.5} readOnly />
+                        <Rating name="half-rating-read" defaultValue={1} precision={0.5} readOnly />
+                    </Stack>
+                    
+                    
+                    </FormControl>
+                    
+                    </div>
+                    </div>
         </Drawer>
         <Box
           component="main"
@@ -164,8 +235,11 @@ function DashboardContent() {
             overflow: "auto",
           }}
         >
-          <Toolbar />
-          <Container maxWidth="lg" sx={{ mt: 4, mb: 3 }}>
+            
+          <Toolbar > 
+            
+          </Toolbar>
+          <Container maxWidth="lg" sx={{ mt: 4, mb: 3 }} style={{paddingTop:'2rem'}}>
             {/* Chart */}
             <Grid container spacing={2}>
               <Paper
@@ -173,17 +247,18 @@ function DashboardContent() {
                   p: 2,
                   display: "flex",
                   flexDirection: "column",
-                  height: 240,
+                  height: 140,
                 }}
                 //   spacing={9}
 
                 style={{
-                  paddingRight: "15rem",
-                  marginRight: "0rem",
+                    paddingRight: "7rem",
+                    marginRight: "0.5rem",
                   marginBottom: "2rem",
                   marginLeft: "1rem",
                 }}
               >
+                <h2> Total Grants Available </h2>
                 {/* <Deposits /> */}
               </Paper>
 
@@ -192,49 +267,38 @@ function DashboardContent() {
                   p: 2,
                   display: "flex",
                   flexDirection: "column",
-                  height: 240,
+                  height: 140,
                 }}
                 style={{
-                  paddingRight: "15rem",
-                  marginRight: "0rem",
+                    paddingRight: "7rem",
+                    marginRight: "0.5rem",
                   marginBottom: "2rem",
                   marginLeft: "1rem",
                 }}
               >
                 {/* <Deposits /> */}
+                <h2> Total Grants Applied </h2>
+
               </Paper>
               <Paper
                 sx={{
                   p: 2,
                   display: "flex",
                   flexDirection: "column",
-                  height: 240,
+                  height: 140,
                 }}
                 style={{
-                  paddingRight: "15rem",
-                  marginRight: "0rem",
+                    paddingRight: "7rem",
+                    marginRight: "0.5rem",
                   marginBottom: "2rem",
                   marginLeft: "1rem",
                 }}
               >
+                <h2> Grants in Progress </h2>
+
                 {/* <Deposits /> */}
               </Paper>
-              <Paper
-                sx={{
-                  p: 2,
-                  display: "flex",
-                  flexDirection: "column",
-                  height: 240,
-                }}
-                style={{
-                  paddingRight: "15rem",
-                  marginRight: "0rem",
-                  marginBottom: "2rem",
-                  marginLeft: "1rem",
-                }}
-              >
-                {/* <Deposits /> */}
-              </Paper>
+              
             </Grid>
             <Grid container spacing={2}>
               <Grid item xs={14}>
@@ -252,7 +316,31 @@ function DashboardContent() {
                     marginBottom: "2rem",
                     marginLeft: "0rem",
                   }}
-                />
+                >
+                   
+                    <h2> Polygon Ecosystem Fund </h2>
+                    <p style={{marginTop: '-1rem'}}>An investment fund dedicated to growing and supporting blockchain ecosystem building applications on Ethereum...</p>
+
+                    <Grid container spacing={2} style={{marginTop: '-1rem'}}>
+                        <Grid item xs={3}>
+                            <div>
+                               <h4>Type</h4> 
+                               
+                            </div>
+                        </Grid>
+                        <Grid item xs={3}>
+                        <div>
+                               <h4>Monetization</h4> 
+                            </div>
+                        </Grid>
+                        <Grid item xs={3}>
+                        <div>
+                               <h4>Community</h4> 
+                            </div>
+                        </Grid>
+                        
+                        </Grid>
+                </Paper>
                 <Paper
                   sx={{
                     p: 2,
@@ -267,7 +355,31 @@ function DashboardContent() {
                     marginBottom: "2rem",
                     marginLeft: "0rem",
                   }}
-                />
+                >
+                   
+                    <h2> Polygon DAO </h2>
+                    <p style={{marginTop: '-1rem'}}>Polygon DAO is the meeting place for present and future Polygon connected communities, where they can learn, collaborate, work, build...</p>
+
+                    <Grid container spacing={2} style={{marginTop: '-1rem'}}>
+                        <Grid item xs={3}>
+                            <div>
+                               <h4>Type</h4> 
+                               
+                            </div>
+                        </Grid>
+                        <Grid item xs={3}>
+                        <div>
+                               <h4>Monetization</h4> 
+                            </div>
+                        </Grid>
+                        <Grid item xs={3}>
+                        <div>
+                               <h4>Community</h4> 
+                            </div>
+                        </Grid>
+                        
+                        </Grid>
+                </Paper>
                 <Paper
                   sx={{
                     p: 2,
@@ -282,35 +394,36 @@ function DashboardContent() {
                     marginBottom: "2rem",
                     marginLeft: "0rem",
                   }}
-                />
+                >
+                   
+                    <h2> Polygon x Outlier Ventures </h2>
+                    <p style={{marginTop: '-1rem'}}>An accelerator that aids fundraising, community growth, token design & implementation, business model innovation and governance, and gives access...</p>
+
+                    <Grid container spacing={2} style={{marginTop: '-1rem'}}>
+                        <Grid item xs={3}>
+                            <div>
+                               <h4>Type</h4> 
+                               
+                            </div>
+                        </Grid>
+                        <Grid item xs={3}>
+                        <div>
+                               <h4>Monetization</h4> 
+                            </div>
+                        </Grid>
+                        <Grid item xs={3}>
+                        <div>
+                               <h4>Community</h4> 
+                            </div>
+                        </Grid>
+                        
+                        </Grid>
+                </Paper>
                 {/* <Chart /> */}
               </Grid>
-              <Grid item xs={12} lg={9}>
-                <Paper
-                  sx={{
-                    p: 2,
-                    display: "flex",
-                    flexDirection: "column",
-                    height: 240,
-                  }}
-                  style={{ marginRight: "4rem" }}
-                >
-                  {/* <Chart /> */}
-                </Paper>
-              </Grid>
+              
               {/* Recent Deposits */}
-              <Grid item xs={12} md={4} lg={3}>
-                <Paper
-                  sx={{
-                    p: 2,
-                    display: "flex",
-                    flexDirection: "column",
-                    height: 240,
-                  }}
-                >
-                  {/* <Deposits /> */}
-                </Paper>
-              </Grid>
+              
               {/* Recent Orders */}
             </Grid>
             <Copyright sx={{ pt: 4 }} />

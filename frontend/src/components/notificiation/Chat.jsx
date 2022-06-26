@@ -1,9 +1,9 @@
 import { Flex } from "@chakra-ui/react";
 import React, { useState } from "react";
-import Divider from "../notificiation/Divider";
-import Footer from "../notificiation/Footer";
-import Header from "../notificiation/Header";
-import Messages from "../notificiation/Messages";
+import Divider from "./Divider";
+import Footer from "./Footer";
+import Header from "./Header";
+import Messages from "./Messages";
 import { api, utils, NotificationItem } from "@epnsproject/frontend-sdk"
 
 const Chat = () => {
