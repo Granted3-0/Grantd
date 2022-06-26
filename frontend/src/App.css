@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   font-family: "Comfortaa";
+  height: 100%;
 }
 
 .App-logo {
@@ -64,7 +65,8 @@
 
 #title {
   font-size: 80px;
-  padding-top: 30px;
+  padding-top: 40px;
+  margin-bottom: 0px;
 }
 
 #button {
@@ -85,10 +87,23 @@
   padding: 20px;
 }
 
+#grant-button {
+  /* backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%); */
+  background: white;
+  color: #787ff6;
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+  padding: 20px;
+  margin-top: 80px;
+  margin-bottom: 150px;
+}
+
 .box-div {
   display: flex;
   margin: auto;
   justify-content: center;
+  padding-top: 30px;
 }
 
 .boxes {
@@ -109,6 +124,20 @@
   font-size: 20px;
 }
 
-/* .box-content {
-  text-align: left;
-} */
+#links {
+  color: white;
+  font-weight: bold;
+  padding: 5px;
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 30px;
+}
+
+#links-grant {
+  color: #787ff6;
+  font-weight: bold;
+  padding: 5px;
+  text-decoration: none;
+  font-size: 30px;
+  text-align: center;
+}

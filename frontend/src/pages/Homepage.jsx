@@ -1,14 +1,17 @@
+import Form from "../components/form/Form";
+import { Link } from "react-router-dom";
+import Button from "@mui/material/Button";
+
 function Homepage() {
   const text =
     "Granted is a milestone-based granting solution providing visibility, bidirectional communication & accountability for sponsors & developers- to help all of us builders get further, faster.";
   return (
     <div id="homepage">
-      <h1 id="title">welcome to granted!</h1>
+      <h1 id="title">granted</h1>
+      <h1>a milestone-based granting solution</h1>
       <div id="homepage-text">
-        <h1>a milestone-based granting solution</h1>
         <h4>{text}</h4>
       </div>
-      {/* <h4>TO GET STARTED, CONNECT TO YOUR WALLET OR UNLOCK</h4> */}
 
       <div class="box-div">
         <span class="boxes">
@@ -24,6 +27,12 @@ function Homepage() {
           <div class="box-content"> Clear milestones & deliverables.</div>
         </span>
       </div>
+
+      <Button id="grant-button">
+        <Link id="links-grant" to="/grants" element={<Form />}>
+          check out our grants
+        </Link>
+      </Button>
     </div>
   );
 }
