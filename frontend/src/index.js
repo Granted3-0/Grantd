@@ -6,6 +6,7 @@ import App from "./App";
 import Homepage from "./pages/Homepage";
 import Form from "./pages/Homepage";
 import Profile from "./pages/Homepage";
+import Notification from './components/notificiation/Notification'
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -17,6 +18,8 @@ root.render(
           <Route path="/grants" element={<Form />} />
           <Route path="/form" element={<Form />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/messagingportal" element={<Notification/>}/>
+
         </Route>
       </Routes>
     </Router>
