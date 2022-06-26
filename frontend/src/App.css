@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  font-family: "Comfortaa";
+  font-family: Comfortaa;
   height: 100%;
 }
 
@@ -159,4 +159,18 @@
 
 #form-page {
   background: "#787ff6";
+}
+
+#link-nav {
+  font-family: Comfortaa;
+  color: white;
+  font-weight: bold;
+  padding: 5px;
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 30px;
+}
+
+.grant-link {
+  text-decoration: none;
 }

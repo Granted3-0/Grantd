@@ -4,7 +4,7 @@ import Divider from "./Divider";
 import Footer from "./Footer";
 import Header from "./Header";
 import Messages from "./Messages";
-import { api, utils, NotificationItem } from "@epnsproject/frontend-sdk";
+//import { api, utils, NotificationItem } from "@epnsproject/frontend-sdk";
 
 const Chat = () => {
   const [messages, setMessages] = useState([

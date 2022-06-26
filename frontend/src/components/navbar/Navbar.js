@@ -13,9 +13,14 @@ import Badge from "@mui/material/Badge";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
-import Link from "@mui/material/Link";
+
 import WalletConnect from "../WalletConnect";
 import UnlockButton from "../UnlockButton";
+import Notification from "../../components/notification/Notification";
+import Homepage from "../../pages/Homepage";
+import Dashboard from "../dashboard/Dashboard";
+import { Link } from "react-router-dom";
+import Form from "../../components/form/Form";
 
 const drawerWidth = 300;
 
@@ -101,8 +106,26 @@ function DashboardForm() {
               noWrap
               sx={{ flexGrow: 1, fontFamily: "Comfortaa" }}
             >
-              granted
+              <div sx={{ display: "flex", justifyContent: "space-around" }}>
+                <Link sx={{}} id="link-nav" to="/" element={<Homepage />}>
+                  granted |
+                </Link>
+                <Link id="link-nav" to="/grants" element={<Dashboard />}>
+                  <b>grants</b>
+                </Link>
+                <Link id="link-nav" to="/form" element={<Form />}>
+                  <b>apply</b>
+                </Link>
+                <Link
+                  id="link-nav"
+                  to="/messagingportal"
+                  element={<Notification />}
+                >
+                  <b>messaging</b>
+                </Link>
+              </div>
             </Typography>
+            <Toolbar></Toolbar>
 
             <WalletConnect />
 
@@ -114,6 +137,6 @@ function DashboardForm() {
   );
 }
 
-export default function Form() {
+export default function Nav() {
   return <DashboardForm />;
 }
