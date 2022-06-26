@@ -4,7 +4,7 @@ import Divider from "./Divider";
 import Footer from "./Footer";
 import Header from "./Header";
 import Messages from "./Messages";
-import { api, utils, NotificationItem } from "@epnsproject/frontend-sdk"
+import { api, utils, NotificationItem } from "@epnsproject/frontend-sdk";
 
 const Chat = () => {
   const [messages, setMessages] = useState([
@@ -13,21 +13,20 @@ const Chat = () => {
     { from: "me", text: "Myself Ferin Patel" },
     {
       from: "computer",
-      text:
-        "Nice to meet you. You can send me message and i'll reply you with same message."
-    }
+      text: "Nice to meet you. You can send me message and i'll reply you with same message.",
+    },
   ]);
   const [inputMessage, setInputMessage] = useState("");
 
   const walletAddress = "0x1234567890abcdcdefghijklmnopqrstuvwxyz123";
-const pageNumber = 1;
-const itemsPerPage = 20;
+  const pageNumber = 1;
+  const itemsPerPage = 20;
 
-// const fetchedNotifications = await api.fetchNotifications(walletAddress, itemsPerPage, pageNumber)
-// console.log(fetchedNotifications);
+  // const fetchedNotifications = await api.fetchNotifications(walletAddress, itemsPerPage, pageNumber)
+  // console.log(fetchedNotifications);
 
-// const parsedResponse = utils.parseApiResponse(fetchedNotifications.results);
-// console.log(parsedResponse);
+  // const parsedResponse = utils.parseApiResponse(fetchedNotifications.results);
+  // console.log(parsedResponse);
 
   const handleSendMessage = () => {
     if (!inputMessage.trim().length) {
@@ -44,14 +43,14 @@ const itemsPerPage = 20;
   };
 
   return (
-    <Flex w="110vh" h="100vh" justify="center" align="center" >
-      <Flex w={["100%"]} h="90%" flexDir="column" >
+    <Flex w="110vh" h="100vh" justify="center" align="center">
+      <Flex w={["100%"]} h="90%" flexDir="column">
         <Header />
         <Divider />
         <Messages messages={messages} />
         <Divider />
         <Footer
-        //   onClick={epnsSubscribe}
+          //   onClick={epnsSubscribe}
           inputMessage={inputMessage}
           setInputMessage={setInputMessage}
           handleSendMessage={handleSendMessage}
