@@ -4,11 +4,13 @@ const web3 = require('web3');
 const hre = require("hardhat");
 const ContractJson = require("../artifacts/contracts/Greeter.sol/Factory.json");
 const ContractJson2 = require("../artifacts/contracts/Greeter.sol/Escrow.json");
+const ContractJson3 = require("../artifacts/contracts/gm.sol/Gm.json");
 // The ABI is very important -- it's the interface to your contract, including
 // the different available functions that are exposed for other contracts,
 // accounts, etc. to call.
 const abi = ContractJson.abi;
 const abi2 = ContractJson2.abi;
+const abi3 = ContractJson3.abi;
 
 async function main() {
     // Notice that we're using process.env.ALCHEMY_API_KEY to load an
@@ -36,21 +38,27 @@ async function main() {
     // The first transaction sets a new greeting with setGreeting, and then
     // waits for the transaction to be mined before doing a sanity
     // check and checking the new greeting state.
-    let source = "0x41A2727ab4c016Ddfd2b314D6Af4CD87a011A744"
-    let destin = "0xa7C8eeeA1D00D1BFa4b117AebF95D9681365AC08"
-    let contra = "0xa025aEe76148DE9376bc4879a25b9A2a13aebdc3"
-    const setTx1 = await Factory.createContract()
-    await setTx1.wait();
-    const addr = await Factory.getByID(0)
-    const Escrow = new hre.ethers.Contract(
-        addr,
-        abi2,
+    // let source = "0x41A2727ab4c016Ddfd2b314D6Af4CD87a011A744"
+    // let destin = "0xa7C8eeeA1D00D1BFa4b117AebF95D9681365AC08"
+    // let contra = "0xa025aEe76148DE9376bc4879a25b9A2a13aebdc3"
+    // const setTx1 = await Factory.createContract()
+    // await setTx1.wait();
+    // const addr = await Factory.getByID(0)
+    // const Escrow = new hre.ethers.Contract(
+    //     addr,
+    //     abi2,
+    //     userWallet
+    // )
+
+    const Gm = new hre.ethers.Contract(
+        process.env.CONTRACT_ADDRESS,
+        abi3,
         userWallet
     )
 
-    console.log("beforer: " + Escrow.address)
-    console.log("before: " + await Escrow.getAllDeposits()); 
-    console.log("before: " + await Escrow.initEscrow(destin, source, 1, 1250001)); 
+    console.log("beforer: " + Gm.address)
+    console.log("before: " + await Gm.tenMinutesHavePassed()); 
+    // console.log("before: " + await Escrow.initEscrow(destin, source, 1, 1250001)); 
     // await Escrow.depositToEscrow(function(){}, {from: source, value: web3.utils.toWei('100', 'ether')});
     // console.log("before: " + await Escrow.totalEscrowBalance.call(destin));
     // await Escrow.deployed().then(function(instance) {
