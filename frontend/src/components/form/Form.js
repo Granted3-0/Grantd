@@ -25,6 +25,7 @@ import {
   InputAdornment,
 } from "@mui/material";
 import Button from "@mui/material/Button";
+import Notification from "../../components/notification/Notification";
 
 const drawerWidth = 400;
 
@@ -187,11 +188,18 @@ function DashboardForm() {
                       sx={{ m: 1 }}
                       style={{ marginTop: "1rem", fontFamily: "Comfortaa" }}
                     >
-                      <InputLabel htmlFor="outlined-adornment-amount">
+                      <InputLabel
+                        htmlFor="outlined-adornment-amount"
+                        style={{ fontFamily: "Comfortaa" }}
+                      >
                         Required
                       </InputLabel>
                       <OutlinedInput
-                        style={{ paddingTop: "0.5rem", width: "60rem" }}
+                        style={{
+                          paddingTop: "0.5rem",
+                          width: "60rem",
+                          fontFamily: "Comfortaa",
+                        }}
                         id="outlined-adornment-amount"
                         startAdornment={
                           <InputAdornment position="start"></InputAdornment>
@@ -210,11 +218,18 @@ function DashboardForm() {
                       sx={{ m: 1 }}
                       style={{ marginTop: "1rem" }}
                     >
-                      <InputLabel htmlFor="outlined-adornment-amount">
+                      <InputLabel
+                        htmlFor="outlined-adornment-amount"
+                        style={{ fontFamily: "Comfortaa" }}
+                      >
                         Required
                       </InputLabel>
                       <OutlinedInput
-                        style={{ paddingTop: "0.5rem", width: "60rem" }}
+                        style={{
+                          paddingTop: "0.5rem",
+                          width: "60rem",
+                          fontFamily: "Comfortaa",
+                        }}
                         id="outlined-adornment-amount"
                         startAdornment={
                           <InputAdornment position="start"></InputAdornment>
@@ -233,11 +248,18 @@ function DashboardForm() {
                       sx={{ m: 1 }}
                       style={{ marginTop: "1rem" }}
                     >
-                      <InputLabel htmlFor="outlined-adornment-amount">
+                      <InputLabel
+                        htmlFor="outlined-adornment-amount"
+                        style={{ fontFamily: "Comfortaa" }}
+                      >
                         Required
                       </InputLabel>
                       <OutlinedInput
-                        style={{ paddingTop: "0.5rem", width: "60rem" }}
+                        style={{
+                          paddingTop: "0.5rem",
+                          width: "60rem",
+                          fontFamily: "Comfortaa",
+                        }}
                         id="outlined-adornment-amount"
                         startAdornment={
                           <InputAdornment position="start"></InputAdornment>
@@ -258,11 +280,18 @@ function DashboardForm() {
                       sx={{ m: 1 }}
                       style={{ marginTop: "1rem" }}
                     >
-                      <InputLabel htmlFor="outlined-adornment-amount">
+                      <InputLabel
+                        htmlFor="outlined-adornment-amount"
+                        style={{ fontFamily: "Comfortaa" }}
+                      >
                         Required
                       </InputLabel>
                       <OutlinedInput
-                        style={{ paddingTop: "2rem", width: "60rem" }}
+                        style={{
+                          paddingTop: "2rem",
+                          width: "60rem",
+                          fontFamily: "Comfortaa",
+                        }}
                         id="outlined-adornment-amount"
                         startAdornment={
                           <InputAdornment position="start"></InputAdornment>
@@ -282,7 +311,10 @@ function DashboardForm() {
                       sx={{ m: 1 }}
                       style={{ marginTop: "1rem" }}
                     >
-                      <InputLabel htmlFor="outlined-adornment-amount">
+                      <InputLabel
+                        htmlFor="outlined-adornment-amount"
+                        style={{ fontFamily: "Comfortaa" }}
+                      >
                         Required
                       </InputLabel>
                       <OutlinedInput
@@ -306,7 +338,10 @@ function DashboardForm() {
                       sx={{ m: 1 }}
                       style={{ marginTop: "1rem" }}
                     >
-                      <InputLabel htmlFor="outlined-adornment-amount">
+                      <InputLabel
+                        htmlFor="outlined-adornment-amount"
+                        style={{ fontFamily: "Comfortaa" }}
+                      >
                         Required
                       </InputLabel>
                       <TextField
@@ -332,7 +367,10 @@ function DashboardForm() {
                       sx={{ m: 1 }}
                       style={{ marginTop: "1rem" }}
                     >
-                      <InputLabel htmlFor="outlined-adornment-amount">
+                      <InputLabel
+                        htmlFor="outlined-adornment-amount"
+                        style={{ fontFamily: "Comfortaa" }}
+                      >
                         Required
                       </InputLabel>
                       <OutlinedInput
@@ -356,7 +394,10 @@ function DashboardForm() {
                       sx={{ m: 1 }}
                       style={{ marginTop: "1rem" }}
                     >
-                      <InputLabel htmlFor="outlined-adornment-amount">
+                      <InputLabel
+                        htmlFor="outlined-adornment-amount"
+                        style={{ fontFamily: "Comfortaa" }}
+                      >
                         Required
                       </InputLabel>
                       <OutlinedInput
@@ -380,7 +421,10 @@ function DashboardForm() {
                       sx={{ m: 1 }}
                       style={{ marginTop: "1rem" }}
                     >
-                      <InputLabel htmlFor="outlined-adornment-amount">
+                      <InputLabel
+                        htmlFor="outlined-adornment-amount"
+                        style={{ fontFamily: "Comfortaa" }}
+                      >
                         Required
                       </InputLabel>
                       <OutlinedInput
@@ -404,7 +448,10 @@ function DashboardForm() {
                       sx={{ m: 1 }}
                       style={{ marginTop: "1rem" }}
                     >
-                      <InputLabel htmlFor="outlined-adornment-amount">
+                      <InputLabel
+                        htmlFor="outlined-adornment-amount"
+                        style={{ fontFamily: "Comfortaa" }}
+                      >
                         Required
                       </InputLabel>
                       <OutlinedInput
@@ -428,7 +475,10 @@ function DashboardForm() {
                       sx={{ m: 1 }}
                       style={{ marginTop: "1rem" }}
                     >
-                      <InputLabel htmlFor="outlined-adornment-amount">
+                      <InputLabel
+                        htmlFor="outlined-adornment-amount"
+                        style={{ fontFamily: "Comfortaa" }}
+                      >
                         Required
                       </InputLabel>
                       <OutlinedInput
@@ -452,7 +502,10 @@ function DashboardForm() {
                       sx={{ m: 1 }}
                       style={{ marginTop: "1rem" }}
                     >
-                      <InputLabel htmlFor="outlined-adornment-amount">
+                      <InputLabel
+                        htmlFor="outlined-adornment-amount"
+                        style={{ fontFamily: "Comfortaa" }}
+                      >
                         Required
                       </InputLabel>
                       <OutlinedInput
@@ -476,7 +529,10 @@ function DashboardForm() {
                       sx={{ m: 1 }}
                       style={{ marginTop: "1rem" }}
                     >
-                      <InputLabel htmlFor="outlined-adornment-amount">
+                      <InputLabel
+                        htmlFor="outlined-adornment-amount"
+                        style={{ fontFamily: "Comfortaa" }}
+                      >
                         Required
                       </InputLabel>
                       <OutlinedInput
@@ -500,7 +556,10 @@ function DashboardForm() {
                       sx={{ m: 1 }}
                       style={{ marginTop: "1rem" }}
                     >
-                      <InputLabel htmlFor="outlined-adornment-amount">
+                      <InputLabel
+                        htmlFor="outlined-adornment-amount"
+                        style={{ fontFamily: "Comfortaa" }}
+                      >
                         Required
                       </InputLabel>
                       <OutlinedInput
@@ -524,11 +583,18 @@ function DashboardForm() {
                       sx={{ m: 1 }}
                       style={{ marginTop: "1rem" }}
                     >
-                      <InputLabel htmlFor="outlined-adornment-amount">
+                      <InputLabel
+                        htmlFor="outlined-adornment-amount"
+                        style={{ fontFamily: "Comfortaa" }}
+                      >
                         Required
                       </InputLabel>
                       <OutlinedInput
-                        style={{ paddingTop: "2rem", width: "60rem" }}
+                        style={{
+                          paddingTop: "2rem",
+                          width: "60rem",
+                          fontFamily: "Comfortaa",
+                        }}
                         id="outlined-adornment-amount"
                         startAdornment={
                           <InputAdornment position="start"></InputAdornment>
@@ -549,11 +615,18 @@ function DashboardForm() {
                       sx={{ m: 1 }}
                       style={{ marginTop: "1rem" }}
                     >
-                      <InputLabel htmlFor="outlined-adornment-amount">
+                      <InputLabel
+                        htmlFor="outlined-adornment-amount"
+                        style={{ fontFamily: "Comfortaa" }}
+                      >
                         Required
                       </InputLabel>
                       <OutlinedInput
-                        style={{ paddingTop: "2rem", width: "60rem" }}
+                        style={{
+                          paddingTop: "2rem",
+                          width: "60rem",
+                          fontFamily: "Comfortaa",
+                        }}
                         id="outlined-adornment-amount"
                         multiline
                         startAdornment={
@@ -565,9 +638,12 @@ function DashboardForm() {
                   </label>
                   <br></br>
                   <br></br>
-
                   <Button id="submit-button">
-                    <Link id="links-submit" to="/grants" element={<Form />}>
+                    <Link
+                      id="links-submit"
+                      to="/messagingportal"
+                      element={<Notification />}
+                    >
                       submit
                     </Link>
                   </Button>
