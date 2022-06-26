@@ -48,7 +48,7 @@ The platform provides a birds eye view of all granted projects- categorizing the
 
 **Polygon** For our applications process we are deploying our smart contracts on Polygon as it is offers scaling and infrastructure support to Ethereum decentralized applications (dApps) and is not plagued by the high transaction fees and network congestion that impacts the Ethereum network.
 
-**Optimism:** We wanted to make our granting platform multi-chain, and at Granted we are super optimistic about supporting public goods, because public goods are good 😍 Nothing more to say here, we think it’s an obvious choice.
+**Optimism:** We wanted to make our granting platform multi-chain, and at Granted we are super optimistic about supporting public goods, because public goods are good 😍 Nothing more to say here, we think it’s an obvious choice. In the spirit of usual silliness of web3 Hackathons...we added a smart contract on Optimism that returns "GM" in the morning. On the frontend you'll be presented with a modal saying GM and asking to say it back. If you do not you get locked out :skull:
 
 **IPFS** **& Filecoin** will be used to store the data for the applications in a decentralized and easy to use manner. Filecoin is completely open-source, enabling developers from all over the world to us our protocol. We loved how easy and simplified it was to store our applications.
 
