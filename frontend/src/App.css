@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: "Comfortaa";
 }
 
 .App-logo {
@@ -36,3 +37,78 @@
     transform: rotate(360deg);
   }
 }
+
+#homepage {
+  color: white;
+  text-align: center;
+  font-family: "Comfortaa";
+  background: linear-gradient(#7bd5f5, #787ff6);
+}
+
+#homepage-text {
+  text-align: center;
+  padding: 10px;
+  text-align: center;
+  padding: 10px;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+  margin: 5px;
+  max-width: 800px;
+  margin: auto;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+#title {
+  font-size: 80px;
+  padding-top: 30px;
+}
+
+#button {
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  font-family: "Comfortaa";
+}
+
+#connect-button {
+  margin: 10px;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+  padding: 20px;
+}
+
+.box-div {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+.boxes {
+  padding: 15px;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+  margin: 10px;
+  width: 220px;
+}
+
+.box-title {
+  justify-content: space-around;
+  padding-bottom: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* .box-content {
+  text-align: left;
+} */

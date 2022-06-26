@@ -3,6 +3,7 @@ import Web3Modal from "web3modal";
 import WalletConnectProvider from "@walletconnect/ethereum-provider";
 import { providers } from "ethers";
 import { useState } from "react";
+import Button from "@mui/material/Button";
 
 function WalletConnect() {
   const [address, setAddress] = useState("");
@@ -50,10 +51,14 @@ function WalletConnect() {
       {address ? (
         <>
           <div>Account: {address}</div>
-          <button onClick={reset}>Disconnect Wallet</button>
+          <Button variant="outlined" id="connect-button" onClick={reset}>
+            <span> Disconnect Wallet</span>
+          </Button>
         </>
       ) : (
-        <button onClick={connect}>Connect Wallet</button>
+        <Button variant="outlined" id="connect-button" onClick={connect}>
+          <span>Connect Wallet</span>
+        </Button>
       )}
     </div>
   );

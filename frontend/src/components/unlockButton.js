@@ -1,13 +1,15 @@
+import Button from "@mui/material/Button";
 function UnlockButton() {
   return (
     <div>
-      <button
+      <Button
+        id="connect-button"
         onClick={
-          window.unlockProtocol && window.unlockProtocol.loadCheckoutModal()
+          window.unlockProtocol && window.unlockProtocol.loadCheckoutModal
         }
       >
-        Unlock your grants!
-      </button>
+        Unlock your homepage
+      </Button>
     </div>
   );
 }
