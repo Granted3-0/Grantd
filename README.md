@@ -18,8 +18,6 @@ For the sponsor, there is a lack of clarity and accountability about project pro
 
 For the developers, finding grants is often time-consuming. We love a good notion page or twitter thread, but sifting through protocols is not an efficient use of the time when we could be spent building \*cough shit-posting. Once a grant is awarded, the expected milestones, deliverables and payout processes are unclear, leaving us asking wen funding?
 
-Speaking directly with protocols, we have received feedback that many experience these pain points. For example. Harmony protocol communicates deliverables via notion, accepts and reviews grant via a talk forum, often chases developers deliverables via telegram, and coordinate multiple core team member to sends funds. There is competition for visibility between sponsors for developers- a pain point mentioned by a Cronos team member. There is also a lack of accountability & follow-through from developers. Likewise, hearing developer feedback from Gitcoin grants, there is a lack of clarity from protocols about necessary milestones & timelines- developers are left questioning wen/how funding?
-
 **For both parties time is spent on the unnecessary instead of the innovative.**
 
 # **The Solution**
@@ -46,6 +44,8 @@ The platform provides a birds eye view of all granted projects- categorizing the
 
 **Wallet connect:** We are using wallet connect as it is the web3 standard for connecting blockchain wallets to dapps. Developers will be able to first explore available grants and when they are ready to apply, they will connect their wallet to access the portal. Wallet connect will provide secure connections between the Granted platform, sponsors and developers wallets - making the granting process social, smooth and seamless.
 
+**Unlock** is an open source, Ethereum-based protocol that we used to token gate sponsor access. This allows the sponsor to manage their grants, applications and funding without a centralized middleman.
+
 **Polygon** For our applications process we are deploying our smart contracts on Polygon as it is offers scaling and infrastructure support to Ethereum decentralized applications (dApps) and is not plagued by the high transaction fees and network congestion that impacts the Ethereum network. Deployement:  https://mumbai.polygonscan.com/address/0x159E84c0E98e5A81CcD9E1d0C72B903c289BfF5b
 
 **Optimism:** We wanted to make our granting platform multi-chain, and at Granted we are super optimistic about supporting public goods, because public goods are good 😍 Nothing more to say here, we think it’s an obvious choice. In the spirit of usual silliness of web3 Hackathons...we added a smart contract on Optimism that returns "GM" in the morning. On the frontend you'll be presented with a modal saying GM and asking to say it back. If you do not you get locked out :skull: Deployment: https://kovan-optimistic.etherscan.io/address/0x2b90d8acf86c00a6c52585dec4ead37728de8e29
@@ -56,4 +56,3 @@ The platform provides a birds eye view of all granted projects- categorizing the
 
 **Ethereum Push Notification Service (EPNS)** we are using the decentralized communication & notification protocol for Web3. Using the protocol, both sponsors and developers can send on-chain or off-chain notifications tied to wallet addresses in a multichain, open, platform agnostic way- this is perfect considering we are using Polygon, Optimism and Harmony. This will provide efficient, open communication for sponsors to hear about the deliverables being met and developers to get notified wen funding
 
-**Unlock** is an open source, Ethereum-based protocol that we used to token gate sponsor access. This allows the sponsor to manage their grants, applications and funding without a centralized middleman.
