@@ -87,7 +87,6 @@ function DashboardForm() {
     <ThemeProvider theme={mdTheme}>
       <Box sx={{ display: "flex" }}>
         <CssBaseline />
-
         <Box
           component="main"
           sx={{
